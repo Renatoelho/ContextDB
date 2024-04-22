@@ -1,37 +1,22 @@
 
-
-from dotenv import load_dotenv
-
 import duckdb
-
-#from langchain.embeddings import OpenAIEmbeddings
-#from langchain_community.embeddings import OpenAIEmbeddings
+from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
-#from langchain.vectorstores import DuckDB
 from langchain_community.vectorstores import DuckDB
 
-#from langchain.document_loaders import TextLoader
-from langchain_community.document_loaders import TextLoader
-from langchain_text_splitters import CharacterTextSplitter
+from utils.importa_atendimentos import atendimentos
 
 load_dotenv()
 
-loader = TextLoader("./contexto/atendimento_clientes.txt")
-documents = loader.load()
-
-documents = CharacterTextSplitter().split_documents(documents)
-embeddings = OpenAIEmbeddings()
-
-#db = duckdb.connect(database = ":memory:", read_only = False)
-
-con = duckdb.connect(database = "atendimento_clientes.duckdb", read_only = False)
-
-#docsearch = DuckDB.from_documents(documents, embeddings, enable_external_access=True)
-
-docsearch = DuckDB(con, embeddings, table_name="atendimento_clientes")
-
-
-query = "What did the president say about Ketanji Brown Jackson"
-docs = docsearch.similarity_search(query, k=3)
-
-print(docs)
+conn = duckdb.connect(database=':memory:',
+    config={
+            "enable_external_access": "false",
+            "autoinstall_known_extensions": "false",
+            "autoload_known_extensions": "false"
+        }
+)
+embedding_function = OpenAIEmbeddings()
+vector_store = DuckDB(connection=conn, embedding=embedding_function)
+vector_store.add_texts(atendimentos())
+result = vector_store.similarity_search('meu pedido chegou incompleto', k=3)
+print(result)
