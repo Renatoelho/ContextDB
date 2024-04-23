@@ -12,13 +12,15 @@ from utils.importa_atendimentos import atendimentos
 
 load_dotenv()
 
-caminho_database = f"{Path(os.path.abspath(__file__)).parent}/database"
+caminho_database = (
+    f"{Path(os.path.abspath(__file__)).parent}/database"
+)
 
 if not os.path.exists(caminho_database):
     Path(caminho_database).mkdir(parents=True, exist_ok=True)
 
 conexao = duckdb.connect(
-    database=f"{caminho_database}/atendimentos.duckdb",
+    database=f"{caminho_database}/atendimentos-db.duckdb",
     config={
         "enable_external_access": "false",
         "autoinstall_known_extensions": "false",
@@ -33,7 +35,8 @@ embedding_atendimento = OpenAIEmbeddings(
 
 database_atendimento = DuckDB(
     connection=conexao,
-    embedding=embedding_atendimento
+    embedding=embedding_atendimento,
+    table_name="atendimentos"
 )
 
 dados_atendimentos = atendimentos()
