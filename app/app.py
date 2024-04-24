@@ -71,5 +71,6 @@ Contexto para a Resposta: Utilize os exemplos abaixo, provenientes de atendiment
 
 print(prompt_final)
 
+# Exemplos:
 # meu pedido chegou incompleto
 # quero cancelar minha assinatura
