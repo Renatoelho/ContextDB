@@ -1,7 +1,7 @@
 
 # IA: Criando um Database de Contexto para seus Prompts
 
-Vou mostrar como desenvolver um sistema para otimizar o uso de **prompts** em aplicações de inteligência artificial, utilizando um banco de dados de contexto. Este projeto utiliza **Python** e plataformas de gerenciamento de banco de dados. Destaca-se pelo uso do **DuckDB** como banco de dados vetorial, o que ajuda a gerenciar grandes volumes de dados de forma eficiente, enquanto a biblioteca **Langchain** é integrada para explorar as capacidades do modelo de linguagem **ChatGPT-3.5** ou superiores.
+Vou mostrar como desenvolver um sistema para otimizar o uso de **prompts** em aplicações de inteligência artificial, utilizando um banco de dados de contexto. Este projeto utiliza **Python** e plataformas de gerenciamento de banco de dados. Destaca-se pelo uso do **DuckDB** como banco de dados vetorial, o que ajuda a gerenciar grandes volumes de dados de forma eficiente, enquanto a biblioteca **Langchain** é integrada para explorar as capacidades do modelo de linguagem **ChatGPT-3.5** ou superior.
 
 Por meio desta integração, o projeto incorpora técnicas avançadas, como **embeddings** e **Retrieval-Augmented Generation (RAG)**, demonstrando uma aplicação prática e sofisticada dos conceitos teóricos abordados. Esta combinação de ferramentas e técnicas não apenas eleva a precisão e eficiência das aplicações de **IA**, mas também exemplifica a prática de ***Few-Shot Prompting***, na qual um prompt é apresentado com alguns exemplos que contribuem para um melhor entendimento do que está sendo solicitado.
 
