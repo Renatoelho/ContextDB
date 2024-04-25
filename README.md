@@ -1,9 +1,9 @@
 
 # IA: Criando um Database de Contexto para seus Prompts
 
-Vou mostrar como desenvolver um sistema para otimizar o uso de **prompts** em aplicações de inteligência artificial, utilizando um banco de dados de contexto. Este projeto utiliza **Python** e plataformas de gerenciamento de banco de dados. Destaca-se pelo uso do **DuckDB** como banco de dados vetorial, o que ajuda a gerenciar grandes volumes de dados de forma eficiente, enquanto a biblioteca **Langchain** é integrada para explorar as capacidades do modelo de linguagem **ChatGPT-3.5** ou superior.
+Vou mostrar como desenvolver um sistema para otimizar o uso de **prompts** em aplicações de inteligência artificial, utilizando um banco de dados de contexto. Este projeto utiliza tecnologias como **Python**, DuckDB, Langchain entre outras. Destaca-se pelo uso do **DuckDB** como banco de dados vetorial, o que ajuda a gerenciar grandes volumes de dados de forma eficiente, enquanto a biblioteca **Langchain** é integrada para explorar as capacidades do modelo de linguagem **ChatGPT-3.5** ou superior.
 
-Por meio desta integração, o projeto incorpora técnicas avançadas, como **embeddings** e **Retrieval-Augmented Generation (RAG)**, demonstrando uma aplicação prática e sofisticada dos conceitos teóricos abordados. Esta combinação de ferramentas e técnicas não apenas eleva a precisão e eficiência das aplicações de **IA**, mas também exemplifica a prática de ***Few-Shot Prompting***, na qual um prompt é apresentado com alguns exemplos que contribuem para um melhor entendimento do que está sendo solicitado.
+Por meio desta integração, o projeto incorpora técnicas avançadas, como [**embeddings**](https://platform.openai.com/docs/guides/embeddings) e [**Retrieval-Augmented Generation (RAG)**](https://help.openai.com/en/articles/8868588-retrieval-augmented-generation-rag-and-semantic-search-for-gpts), demonstrando uma aplicação prática e sofisticada dos conceitos teóricos abordados. Esta combinação de ferramentas e técnicas não apenas eleva a precisão e eficiência das aplicações de **IA**, mas também exemplifica a prática de [***Few-Shot Prompting***](https://www.promptingguide.ai/pt/techniques/fewshot), na qual um prompt é apresentado com alguns exemplos que contribuem para um melhor entendimento do que está sendo solicitado.
 
 
 # Apresentação em vídeo
@@ -53,7 +53,7 @@ source .venv/bin/activate
 ```bash
 pip install pip setuptools wheel && pip install -r requirements.txt
 ```
-***IMPORTANTE:*** atualize o arquivo [.env](app/.env) com o token de acesso da OpenIA.
+***IMPORTANTE:*** atualize o arquivo [.env](app/.env) com o token de acesso da OpenAI, além de ser necessário ter créditos em sua conta na plataforma de desenvolvedor da OpenAI [https://platform.openai.com/](https://platform.openai.com).
 
 + Testando a aplicação
 ```bash
