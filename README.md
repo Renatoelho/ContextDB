@@ -9,7 +9,7 @@ Por meio desta integração, o projeto incorpora técnicas avançadas, como [**e
 # Apresentação em vídeo
 
 <p align="center">
-  <a href="https://www.youtube.com/@renato-coelho" target="_blank"><img src="deploy/thumbnail/ContextDB_Youtube.png" alt="Vídeo de apresentação"></a>
+  <a href="https://www.youtube.com/@renato-coelho" target="_blank"><img src="thumbnail/ContextDB_Youtube.png" alt="Vídeo de apresentação"></a>
 </p>
 
 

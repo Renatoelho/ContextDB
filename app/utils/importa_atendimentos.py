@@ -32,9 +32,8 @@ def atendimentos() -> Union[list, bool]:
                     lista_atendimentos.append(linha)
 
         adiciona_processados(arquivos_atendimentos)
-        if len(lista_atendimentos) == 0:
-            raise ValueError("Não existe novos arquivos para importação.")
+
         return lista_atendimentos
 
-    except Exception as _:
-        return False
+    except Exception as erro:
+        raise ValueError(f"Erro ao tratar os atendimentos: {erro}")
