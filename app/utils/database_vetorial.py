@@ -1,6 +1,6 @@
 
 import os
-from typing import Union, List
+from typing import List
 from pathlib import Path
 
 import duckdb
@@ -12,7 +12,7 @@ from langchain_community.vectorstores import DuckDB
 load_dotenv()
 
 
-def conexao_database_vetorial() -> Union[object, bool]:
+def conexao_database() -> object:
     try:
         caminho_database = (
             f"{Path(os.path.abspath(__file__)).parent.parent}/database"
@@ -34,7 +34,7 @@ def conexao_database_vetorial() -> Union[object, bool]:
         raise ValueError(f"Erro ao conectar no database vetorial: {erro}")
 
 
-def grava_embedding_database_vetorial(
+def grava_embedding(
     conexao: object,
     atendimentos: List[str]
 ) -> bool:
@@ -59,11 +59,11 @@ def grava_embedding_database_vetorial(
         raise ValueError(f"Erro ao adicionar embeddings ao database: {erro}")
 
 
-def pesquisa_contexto_database_vetorial(
+def pesquisa_contexto(
     conexao: object,
     mensagem: str,
     quantidade: int
-) -> Union[str, bool]:
+) -> str:
     try:
 
         base_contexto_tmp = []

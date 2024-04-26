@@ -8,7 +8,7 @@ from utils.controle_processados import adiciona_processados
 from utils.controle_processados import remove_processados
 
 
-def atendimentos() -> Union[list, bool]:
+def contexto_atendimentos() -> Union[list, bool]:
     try:
         caminho_local = (
             f"{Path(os.path.abspath(__file__)).parent.parent}/contexto"
